@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    render text: "Hello world"
+    render html: "<body style='background: #282a36'><h2 style='color: #8be9fd; font-family: monospace; font-size: 3em;'>Hello world</h2></body>".html_safe
   end
   
 end

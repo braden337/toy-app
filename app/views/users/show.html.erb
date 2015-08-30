@@ -12,3 +12,9 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<ul>
+  <% @user.microposts.reverse.each do |post| %>
+    <li><%= post.content %></li>
+  <% end %>
+</ul>
